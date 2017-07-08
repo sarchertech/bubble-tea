@@ -2,25 +2,16 @@
 title: Restaurant Equipment
 ---
 
-<p>Restaurant Equipment</p>
 
-<ul>
-  <li>
-    <a href="restaurant_equipment/boba_preparation">Boba Preparation</a>
-  </li>
-  <li>
-    <a href="restaurant_equipment/shaker_machines">Shaker Machines</a>
-  </li>
-  <li>
-    <a href="restaurant_equipment/refrigerators">Refrigerators</a>
-  </li>
-  <li>
-    <a href="restaurant_equipment/sealers">Sealers</a>
-  </li>
-  <li>
-    <a href="restaurant_equipment/liquid_dispensers">Liquid Dispensers</a>
-  </li>
-  <li>
-    <a href="restaurant_equipment/tea_brewers">Tea Brewers</a>
-  </li>
+<ul class="nav-list">
+  <%= partial 'partials/nav_list_item', locals: { name: "Boba Preparation", link: "restaurant-equipment/boba-preparation", 
+    description: "Example Text" } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Shaker Machines", link: "restaurant-equipment/shaker-machines", 
+    description: "Example Text" } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Refrigerators", link: "restaurant-equipment/refrigerators", 
+    description: "Example Text" } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Liquid Dispensers", link: "restaurant-equipment/liquid-dispensers", 
+    description: "Example Text" } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Tea Brewers", link: "restaurant-equipment/tea-brewers", 
+    description: "Example Text" } %>
 </ul>

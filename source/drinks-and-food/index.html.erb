@@ -1,53 +1,27 @@
 ---
+title: Drinks and Food
 ---
-<div class="page-title">
-  <h1 class="page-title__title">Drinks and Food</h1>
-</div>
 
 <ul class="nav-list">
-  <li class="nav-list__item">
-    <img src="/images/icon.png" class="nav-list__icon">
-    <div class="nav-list__description">
-      <a href="drinks_and_food/must_haves" class="nav-list__link">Must Have</a>
-      <p class="nav-list__text"> When a tornado rips through Kansas, Dorothy and her dog, Toto, are whisked away in their house to the magical land of Oz. They follow the Yellow Brick Road toward the Emerald City to meet the Wizard </p>
-    </div>
-  </li>
-   <li class="nav-list__item">
-    <img src="/images/icon.png" class="nav-list__icon">
-    <div class="nav-list__description">
-      <a href="drinks_and_food/toppings" class="nav-list__link">Toppings</a>
-      <p class="nav-list__text"> When a tornado rips through Kansas, Dorothy and her dog, Toto, are whisked away in their house to the magical land of Oz. They follow the Yellow Brick Road toward the Emerald City to meet the Wizard </p>
-    </div>
-  </li>
-  <li class="nav-list__item">
-    <img src="/images/icon.png" class="nav-list__icon">
-    <div class="nav-list__description">
-      <a href="drinks_and_food/flavor_of_the_week" class="nav-list__link">Flavor of the Week</a>
-      <p class="nav-list__text"> When a tornado rips through Kansas, Dorothy and her dog, Toto, are whisked away in their house to the magical land of Oz. They follow the Yellow Brick Road toward the Emerald City to meet the Wizard </p>
-    </div>
-  </li>
-  <li class="nav-list__item">
-    <img src="/images/icon.png" class="nav-list__icon">
-    <div class="nav-list__description">
-      <a href="drinks_and_food/food" class="nav-list__link">Food</a>
-      <p class="nav-list__text"> When a tornado rips through Kansas, Dorothy and her dog, Toto, are whisked away in their house to the magical land of Oz. They follow the Yellow Brick Road toward the Emerald City to meet the Wizard </p>
-    </div>
-  </li>
-     <li class="nav-list__item">
-    <img src="/images/icon.png" class="nav-list__icon">
-    <div class="nav-list__description">
-      <a href="drinks_and_food/trends" class="nav-list__link">Trends</a>
-      <p class="nav-list__text"> When a tornado rips through Kansas, Dorothy and her dog, Toto, are whisked away in their house to the magical land of Oz. They follow the Yellow Brick Road toward the Emerald City to meet the Wizard </p>
-    </div>
-  </li>
-  <li class="nav-list__item">
-    <img src="/images/icon.png" class="nav-list__icon">
-    <div class="nav-list__description">
-      <a href="drinks_and_food/outside_the_box" class="nav-list__link">Outside the Box</a>
-      <p class="nav-list__text"> When a tornado rips through Kansas, Dorothy and her dog, Toto, are whisked away in their house to the magical land of Oz. They follow the Yellow Brick Road toward the Emerald City to meet the Wizard </p>
-    </div>
-  </li>
- 
-
+  <%= partial 'partials/nav_list_item', locals: { name: "Must haves", link: "drinks-and-food/must-haves", 
+    description: "Must have flavors for an up and coming bubble tea shop!" } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Toppings", link: "drinks-and-food/toppings", 
+    description: "Find a delicious variety of toppings for your drinks!" } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Tea", link: "drinks-and-food/tea", 
+    description: "See our breakdown of different kinds of tea." } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Flavor of the Week", link: "drinks-and-food/flavor-of-the-week", 
+    description: "See our breakdown of different kinds of tea." } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Food", link: "drinks-and-food/food", 
+    description: "A variety of delicious foods you should consider adding to your store." } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Trends", link: "drinks-and-food/trends", 
+    description: "Keep up to date on bubble tea trends around the world." } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Outside the Box", link: "drinks-and-food/outside-the-box", 
+    description: "Find interesting ideas to make your shop stand out from the competition." } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Milk", link: "drinks-and-food/milk", 
+    description: "There's more than one kind of milk! Which milks should your shop have?" } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Sweeteners", link: "drinks-and-food/sweeteners", 
+    description: "Sweeteners for different drinks." } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Slushes", link: "drinks-and-food/slushes", 
+    description: "Fill your menu with refreshing slushes." } %>
 </ul>
 

@@ -1,0 +1,12 @@
+<div class="affiliate-item">
+  <p class="affiliate-item__title"><%= title %></p>
+  <p class="affiliate-item__description"><%= description %></p>
+  <% if list %>
+    <ul class="affiliate-item__list">
+      <% list.each do |item| %>
+        <li class="affiliate-item__bullet"><%= item %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <a href="<%= link %>" class="affiliate-item__link"><%= link_text %></a>
+</div>

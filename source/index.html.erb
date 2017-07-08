@@ -1,45 +1,19 @@
 ---
 title: Home
+layout: home
 ---
 
-<div class="hero-image">
-  <img src="/images/hero-img.png" >
-</div>
-
 <ul class="nav-list">
-  <li class="nav-list__item">
-    <img src="/images/icon.png" class="nav-list__icon">
-    <div class="nav-list__description">
-      <a href="business" class="nav-list__link"> Business </a>
-      <p class="nav-list__text"> Here's some description text about a main page </p>
-    </div>
-  </li>
-  <li class="nav-list__item">
-    <img src="/images/icon.png" class="nav-list__icon">
-    <div class="nav-list__description">
-      <a href="drinks_and_food" class="nav-list__link">Drinks and Food </a>
-      <p class="nav-list__text"> Here's some description text about a main page </p>
-    </div>
-  </li>
-  <li class="nav-list__item">
-    <img src="/images/icon.png" class="nav-list__icon">
-    <div class="nav-list__description">
-      <a href="equipment_and_supplies" class="nav-list__link"> Equipment and Supplies </a>
-      <p class="nav-list__text"> Here's some description text about a main page </p>
-    </div>
-  </li>
-  <li class="nav-list__item">
-    <img src="/images/icon.png" class="nav-list__icon">
-    <div class="nav-list__description">
-      <a href="design" class="nav-list__link"> Design </a>
-      <p class="nav-list__text"> Here's some description text about a main page </p>
-    </div>
-  </li>
-  <li class="nav-list__item">
-    <img src="/images/icon.png" class="nav-list__icon">
-    <div class="nav-list__description">
-      <a href="featured_shops/featured_shop" class="nav-list__link"> Featured Shops </a>
-      <p class="nav-list__text"> Here's some description text about a main page </p>
-    </div>
-  </li>
+  <%= partial 'partials/nav_list_item', locals: { name: "Business", link: "business", 
+    description: "Check here for business tips including, start-up costs, profit margins, advice on regulations, and more." } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Drinks and Food", link: "drinks-and-food", 
+    description: "What kind of drinks and food should your store have?" } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Equipment", link: "equipment", 
+    description: "Equipment to make your shop run smoothly and efficiently." } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Supplies", link: "supplies", 
+    description: "Cups, straws, etc." } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Design", link: "design", 
+    description: "Need help decorating your store? We have tons of design tips and suggestions." } %>
+  <%= partial 'partials/nav_list_item', locals: { name: "Featured Shops", link: "featured-shops/featured-shop", 
+    description: "Check out our featured stores! Contact us to see how to feature yours!" } %>
 </ul>

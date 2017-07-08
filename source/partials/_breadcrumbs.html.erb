@@ -1,24 +1,21 @@
 <% url_array = current_page.url.split('/') %>
+<% url_array.shift %>
 <div class="bread-crumbs">
-  <div class="bread-crumbs__primary">
-    <a href="/" class="">Home</a>
-    <div class="arrow-right"></div>
+  <div class="bread-crumbs__item bread-crumbs__item--first">
+    <a href="/" class="bread-crumbs__link bread-crumbs__link--first">
+      <%= partial "partials/home_svg" %>
+    </a>
   </div>
-  <% if url_array[1] %>
-    <div class="bread-crumbs__secondary"> 
-      <a href=<%="/#{url_array[1]}"%> class=""><%="#{url_array[1].humanize}"%></a>
-      <div class="arrow-right"></div>
-    </div>
-  <% end %>
-  <% if url_array[2] %>
-    <div class="bread-crumbs__tertiary"> 
-      <a href=<%="/#{url_array[1]}/#{url_array[2]}"%> class=""><%="#{url_array[2].humanize}"%></a>
-    </div>
-  <% end %>
-  <% if url_array[3] %>
-    <div class="bread-crumbs__quaternary"> 
-      <a href=<%="/#{url_array[1]}/#{url_array[2]}/#{url_array[3]}"%> class=""><%="#{url_array[3].humanize}"%></a>
-    </div>
+  <% url_array.each_with_index do |url, i| %>
+    <% if i == url_array.length - 1 %>
+      <div class="bread-crumbs__item bread-crumbs__item--last"> 
+        <span class="bread-crumbs__page-title"><%= url_array[i].titleize %></span>
+      </div>
+    <% else %>
+      <div class=<%="bread-crumbs__item bread-crumbs__item--#{i + 1}"%>> 
+        <a href=<%="/#{url_array[i]}"%> class="bread-crumbs__link"><%="#{url_array[i].titleize}"%></a>
+      </div>
+    <% end %>
   <% end %>
 </div>
 

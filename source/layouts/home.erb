@@ -1,0 +1,26 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Tea Today -- How to start a bubble tea business</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <%= stylesheet_link_tag "reset" %>
+  <%= stylesheet_link_tag "site" %>
+</head>
+<body>
+
+<header class="home-header">
+  <div class="home-header__inner-wrapper">
+    <h1 class="home-header__title">Bubble Tea Today</h1>
+    <div class="home-header__svg-wrapper">
+      <%= partial "partials/hero_svg" %>
+    </div>
+  </div>
+</header>
+
+<div class="page-wrapper">
+  <%= yield %>
+</div>
+
+</body>
+</html>

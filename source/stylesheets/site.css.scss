@@ -1,30 +1,73 @@
 --- 
 --- 
+
+@function rando-shuffle($list) {
+  $list-length: length($list);
+
+  @while($list-length > 0) {
+    $rand: random($list-length);
+    $temp: nth($list, $rand);
+    $list: set-nth($list, $rand, nth($list, $list-length));
+    $list: set-nth($list, $list-length, $temp);
+    $list-length: $list-length - 1;
+  }
+
+  @return $list;
+}
+
 //css 
 $primary-text-dark: rgba(0, 0, 0, 0.68);
+$secondary-text-dark: rgba(0, 0, 0, 0.48);
 $divider-color-dark: rgba(0, 0, 0, 0.12);
 
 $primary-color: #a5d6a7;
 $primary-color-light:#d7ffd9;
 $primary-color-dark: #75a478;
-$primary-font: sans-serif;
+$primary-font: 'Roboto', sans-serif;
 
 body {
   background-color:#fffcfc;
-  padding: 10px;
+  font-family: $primary-font;
+  color: $primary-text-dark;
+}
+
+.page-wrapper {
   max-width: 1200px;
   margin: auto;
-  font-family: $primary-font
 }
-//hero image
-.hero-image {
-  display: flex;
-  justify-content: center;
-  margin: 10px;
 
-  img {
-    width: 60vw;
-    height: auto;
+.home-header {
+  background: linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%);
+  padding-top: 20px;
+
+  &__inner-wrapper {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  &__title {
+    font-size: 180%;
+    margin-bottom: 8px;
+    padding: 0 8px;
+  }
+
+  &__svg-wrapper {
+    max-width: 1200px;
+    overflow: hidden;
+  }
+
+  &__svg-wrapper svg {
+    width: 150%;
+    position: relative;
+    left: -34%;
+  }
+
+  @media (min-width: 600px) {
+    &__svg-wrapper svg {
+      width: 100%;
+      position: relative;
+      left: 0;
+    }
   }
 }
 
@@ -61,14 +104,6 @@ body {
   }
 }
 
-// page-title
-.page-title {;
-  &__title {
-    font-size: 150%;
-    text-align: center;
-  }
-}
-
 //link-list
 .link-list {
   line-height: 150%;
@@ -86,78 +121,170 @@ body {
 
 //navigation list
 .nav-list {
+  display: flex;
+  flex-wrap: wrap;
+
   &__item {
+    flex-basis: 100%;
     display: flex;
     align-items: center;
-    padding: 3% 0;
+    padding: 8px;
     border-bottom: 1px solid $divider-color-dark
   }
 
-  &__icon {
-    width: 100px;
+  &__cup-badge-wrapper {
+    width: 200px;
+    height: 200px;
+    margin-right: 8px;
+    margin-left: 4px;
   }
 
   &__description {
-    line-height: 150%;
+    line-height: 1.2;
   }
 
   &__link {
-    font-size: 150%;
-    color: $primary-text-dark;
+    font-size: 115%;
+    // color: $primary-text-dark;
+    color: #00A99D;
+    text-decoration: none;
+    line-height: 1.4;
   }
 
   &__text {
     font-size: 100%;
-    color: $primary-text-dark;
+    color: $secondary-text-dark;
+  }
+
+  $background-colors: #4BC2A5 #606F40 #6648CA;
+  $border-colors: #ff9900 #77ff66 #73C227;
+  $cup-colors: #111 #222 #333;
+
+  $colorSets: ();
+
+  @for $i from 1 through length($background-colors) {
+    @for $j from 1 through length($border-colors) {
+      @for $k from 1 through length($cup-colors) {
+        //$index: #{ (length($border-colors) * length($cup-colors) * $i) + (length($cup-colors) * $j) + $k };     
+        $colorSets: append( $colorSets, ( nth($background-colors, $i), nth($border-colors, $j), nth($cup-colors, $k) ) , space);
+      }
+    }      
+  }
+
+  $colorSets: rando-shuffle($colorSets);  
+
+  @for $ii from 1 through length($colorSets) {
+    $colors: nth($colorSets, $ii);
+
+    &__cup-badge::nth-of-type( #{$ii} ) {
+      .cb1 {
+        fill: nth($colors, 1)
+      }
+      
+      .cb0 {
+        fill: nth($colors, 2)
+      }
+
+      .cb4 {
+        fill: nth($colors, 3)
+      }
+    }  
+  }
+
+
+    // cup
+    //   &__cup-badge:nth-child(#{$i}n) .cb4 {
+    //   fill: #EF8E7D;
+    // }
+
+  // background
+  // &__cup-badge .cb1 {
+  //   fill: blue;
+  // }
+
+  // // outline
+  // &__cup-badge .cb0 {
+  //   fill: red;
+  // }
+
+
+  @media (min-width: 800px) {
+    padding: 8px 16px;
+
+    &__item {
+      flex-basis: calc(50% - 8px);
+    }
+
+    &__item:nth-child(odd) {
+      margin-right: 16px;
+    }
   }
 }
 
 .bread-crumbs {
-  margin-top: 4px;
   margin-bottom: 8px;
   display: flex;
-  height: 60px;
+  width: auto;
+  max-width: 1200px;
+  overflow: hidden;
   position: relative;
-  font-size: 120%;
+  // background: linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%);
+  background-color: #525252;
+  padding: 0 8px;
 
-  &__primary, &__secondary, &__tertiary, &__quaternary {
-    flex-grow: 1;
-    text-align: center;
-    line-height: 60px;
-
-    border-radius: 2px;
+  &__item {
+    font-size: 130%;
+    height: 60px;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    overflow: hidden;
   } 
 
-  &__primary {
-    background-color: lightgray;
-    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
-    z-index: 3;
+  &__item--first {
+    flex-shrink: 0;
   }
 
-  &__secondary {
-    background-color: lightblue;
-    position: relative;
-    left: -34px;
-    z-index: 2;
-    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+  &__item::after {
+    content: "⟩ ";
+    color: #EFBDC0;
+    padding-left: 4px;
+    padding-right: 8px;
   }
 
-  &__tertiary {
-    background-color: lightcyan;
-    position: relative;
-    left: -68px;
-    z-index: 1;
-    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+  &__item--last::after {
+    content: "";
+    padding: 0;
   }
-  &__quaternary {
-    background-color: lightgreen;
-    position: relative;
-    left: -102px;
-    z-index: 0;
-    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+
+  &__link {
+    text-decoration: none;
+    color: #00A99D;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // border: 1px solid black;
+  }
+
+  &__link--first svg {
+    height: 30px;
+    width: 30px;
+    margin-right: 2px;
+    -moz-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+  }
+
+  &__page-title {
+    white-space: nowrap;
+    color: #EFBDC0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 4px;
   }
 }

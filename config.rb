@@ -6,6 +6,7 @@ activate :autoprefixer do |prefix|
 end
 
 activate :directory_indexes
+activate :livereload
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -50,21 +51,22 @@ page '/*.txt', layout: false
 # flavor of the week blog
 activate :blog do |blog| 
   blog.name = "flavors_of_the_week" 
-  blog.prefix = "flavors_of_the_week" 
+  blog.prefix = "flavors-of-the-week" 
+  blog.layout = "flavors-of-the-week"
   blog.paginate = true
   blog.per_page = 10
   blog.page_link = "page/{num}"
 end 
 
-page "/flavors_of_the_week/*", :layout => "flavors_of_the_week"
+# page "/flavors-of-the_week/*", :layout => "flavors-of-the-week"
 
 # featured shops blog
 activate :blog do |blog| 
   blog.name = "featured_shops" 
-  blog.prefix = "featured_shops"
+  blog.prefix = "featured-shops"
   blog.paginate = true 
   blog.per_page = 10
   blog.page_link = "page/{num}"
 end 
 
-page "/featured_shops/*", :layout => "featured_shops"
+page "/featured-shops/*", :layout => "featured-shops"
