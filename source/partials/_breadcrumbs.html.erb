@@ -9,7 +9,7 @@
   <% url_array.each_with_index do |url, i| %>
     <% if i == url_array.length - 1 %>
       <div class="bread-crumbs__item bread-crumbs__item--last"> 
-        <span class="bread-crumbs__page-title"><%= url_array[i].titleize %></span>
+        <h1 class="bread-crumbs__page-title"><%= url_array[i].titleize %></h1>
       </div>
     <% else %>
       <div class=<%="bread-crumbs__item bread-crumbs__item--#{i + 1}"%>> 

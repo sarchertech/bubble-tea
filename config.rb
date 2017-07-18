@@ -35,11 +35,26 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  def af_category(title, &block)
+    concat("<div class='af-category section'>") 
+    concat("<h2 class=af-category__title>#{title}</h2>")
+    concat(capture_html(&block))
+    concat("</div>")
+  end
+
+  def af_link(title, link, image=nil, &block)
+    concat("<a class='af-link' href='<%= link %>' target='_blank'>")
+    concat(image_tag image, class: 'af-link__img', width: "64", height: "64") if image
+    concat("<div class='af-link__description'>")
+    concat("<h3 class='af-link__title'>#{title}</h3>")
+    concat("<p class='af-link__text'>")
+    concat(capture_html(&block))
+    concat("</p>")
+    concat("</div>")
+    concat("</a>")
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings

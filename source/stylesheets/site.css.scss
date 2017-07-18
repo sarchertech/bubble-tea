@@ -34,24 +34,32 @@ $colorF: #A2D3C7;
 $colorG: #00A99D;
 $colorH: #EFBDC0;
 
-$background-colors: $colorA $colorC $colorF;
-$border-colors: $colorB $colorD $colorG $colorE;
-$cup-colors: $colorB $colorD $colorG $colorE;
+$light-gray: #696969;
+
+// $background-colors: $colorA $colorC $colorF;
+// $border-colors: $colorB $colorD $colorG $colorE;
+// $cup-colors: $colorB $colorD $colorG $colorE;
 
 
-$colorSets: (
-  ($colorC, $colorF, $colorE)
-  ($colorF, $colorG, $colorG)
-  ($colorA, $colorF, $colorC)
-  ($colorC, $colorA, $colorF)
-  ($colorF, $colorC, $colorC)
-  ($colorC, $colorA, $colorE)
-);
+// $colorSets: (
+//   ($colorC, $colorF, $colorE)
+//   ($colorF, $colorG, $colorG)
+//   ($colorA, $colorF, $colorC)
+//   ($colorC, $colorA, $colorF)
+//   ($colorF, $colorC, $colorC)
+//   ($colorC, $colorA, $colorE)
+// );
 
 body {
   background-color:#fffcfc;
   font-family: $primary-font;
   color: $primary-text-dark;
+}
+
+.section {
+  padding: 8px;
+  border-bottom: 1px solid $divider-color-dark;
+  margin-bottom: 4px;
 }
 
 .page-wrapper {
@@ -60,8 +68,62 @@ body {
 }
 
 .page {
-  padding: 0 8px;
+  line-height: 1.2;
+
+  a {
+    text-decoration: none;
+    color: $colorG;
+  }
 }
+
+.page-intro {
+  p {
+    margin-bottom: 8px;
+  }
+}
+
+.af-category {
+  &__title {
+    font-size: 105%;
+    font-weight: 600;
+    margin-bottom: 2px;
+    opacity: 0.75;
+  }
+
+  p {
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    padding-top: 8px;
+  }
+
+  &__item {
+    margin-bottom: 8px;
+  }
+}
+
+.af-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__img {
+    border-radius: 50%;
+    border: 3px solid $colorH;
+    margin-right: 8px;
+    align-self: center;
+  }
+
+  &__title {
+    color: $colorG;
+  }
+
+  &__text {
+    color: $primary-text-dark;
+  }
+}
+
 
 .home-header {
   background: linear-gradient(to top, #1c92d2 0%, #f2fcfe 100%);
@@ -226,52 +288,6 @@ body {
     color: $secondary-text-dark;
   }
 
-  // @for $i from 1 through length($background-colors) {
-  //   @for $j from 1 through length($border-colors) {
-  //     @for $k from 1 through length($cup-colors) {
-  //       //$index: #{ (length($border-colors) * length($cup-colors) * $i) + (length($cup-colors) * $j) + $k };     
-  //       $colorSets: append( $colorSets, ( nth($background-colors, $i), nth($border-colors, $j), nth($cup-colors, $k) ) , space);
-  //     }
-  //   }      
-  // }
-
-  // $colorSets: rando-shuffle($colorSets);  
-  
-  // @for $ii from 1 through length($colorSets) {
-  //   $colors: nth($colorSets, $ii);
-
-  //   &__item:nth-child(#{$ii}n) {
-  //     .cb0 {
-  //       fill: nth($colors, 1)
-  //     }
-
-  //     .cb0 {
-  //       stroke: nth($colors, 2)
-  //     }
-      
-  //     .cb3 {
-  //       fill: nth($colors, 3)
-  //     }
-  //   }  
-  // }
-
-
-    // cup
-    //   &__cup-badge:nth-child(#{$i}n) .cb4 {
-    //   fill: #EF8E7D;
-    // }
-
-  // background
-  // &__cup-badge .cb1 {
-  //   fill: blue;
-  // }
-
-  // // outline
-  // &__cup-badge .cb0 {
-  //   fill: red;
-  // }
-
-
   @media (min-width: 800px) {
     padding: 8px 16px;
 
@@ -293,7 +309,7 @@ body {
   overflow: hidden;
   position: relative;
   // background: linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%);
-  background-color: #525252;
+  background-color: $light-gray;
   padding: 0 8px;
 
   &__item {
