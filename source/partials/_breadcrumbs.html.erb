@@ -11,6 +11,10 @@
       <div class="bread-crumbs__item bread-crumbs__item--last"> 
         <h1 class="bread-crumbs__page-title"><%= url_array[i].titleize %></h1>
       </div>
+    <% elsif i == 1 %>
+      <div class=<%="bread-crumbs__item bread-crumbs__item--#{i + 1}"%>> 
+        <a href=<%="/#{url_array[i - 1]}/#{url_array[i]}"%> class="bread-crumbs__link"><%="#{url_array[i].titleize}"%></a>
+      </div>
     <% else %>
       <div class=<%="bread-crumbs__item bread-crumbs__item--#{i + 1}"%>> 
         <a href=<%="/#{url_array[i]}"%> class="bread-crumbs__link"><%="#{url_array[i].titleize}"%></a>
@@ -18,5 +22,3 @@
     <% end %>
   <% end %>
 </div>
-
-

@@ -60,6 +60,25 @@ body {
   padding: 8px;
   border-bottom: 1px solid $divider-color-dark;
   margin-bottom: 4px;
+
+  &__header {
+    font-size: 105%;
+    font-weight: 600;
+    margin-bottom: 5px;
+    opacity: 0.75;
+  }
+
+  &__sub-header {
+    font-size: 100%;
+    font-weight: 600;
+    margin-bottom: 2px;
+    opacity: 0.75;
+  }
+
+  &__sub-section {
+    margin-left: 8px;
+    margin-bottom: 8px;
+  }
 }
 
 .page-wrapper {
@@ -109,8 +128,8 @@ body {
   justify-content: space-between;
 
   &__img {
-    border-radius: 50%;
-    border: 3px solid $colorH;
+    // border-radius: 50%;
+    // border: 3px solid $colorH;
     margin-right: 8px;
     align-self: center;
   }

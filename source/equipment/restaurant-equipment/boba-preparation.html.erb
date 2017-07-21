@@ -15,9 +15,8 @@ title: Boba Cooking and Storage Equipment
   </p>
 </div>
 
-<div class="af-category section">
-  <h2 class=af-category__title>Induction Cookers</h2>
-  <p class="af-category__description">
+<% af_category "Induction Cookers" do %>
+  <p>
     Induction cookers are one of the fastest and easiest ways to boil water
     and heat boba, and they'are a lot cheaper and smaller than a 
     fullsize stove top.
@@ -25,10 +24,11 @@ title: Boba Cooking and Storage Equipment
 
   <ul class="af-category__list">
     <li class="af-category__item">
-      <% af_link("Avantco Countertop Induction Range", 
-        "https://www.webstaurantstore.com/avantco-ic1800-countertop-induction-range-cooker-120v-1800w/177IC1800%20%20%20120.html", 
-        'images/af/equipment/avantco_induction_range.jpg') do %>
-        This cooker has an analog temperator knob, heat and hold buttons,
+      <% af_link({ 
+        title: "Avantco Countertop Induction Range", #link text
+        link: "https://www.webstaurantstore.com/avantco-ic1800-countertop-induction-range-cooker-120v-1800w/177IC1800%20%20%20120.html", #href
+        image: 'images/af/equipment/avantco_induction_range.jpg'}) do %> <%# image url %>
+        This cooker has an analog temperature knob, heat and hold buttons,
         and a digital timer display--sold at webstaurantstore.com
       <% end %>
     </li>
@@ -41,7 +41,7 @@ title: Boba Cooking and Storage Equipment
             Avantco Countertop Induction Range 
           </h3>
           <p class="af-link__text">
-            This cooker has an analog temperator knob, heat and hold buttons,
+            This cooker has an analog temperature knob, heat and hold buttons,
             and a digital timer display--sold at webstaurantstore.com
           </p>
         </div>
@@ -62,6 +62,10 @@ title: Boba Cooking and Storage Equipment
         </div>
       </a>
     </li>
+  </ul>
+<% end %>
+
+  <ul class="af-category__list">
     <li class="affiliate-links__li">
       <p class="affiliate-links__title">Avantco Double Countertop Induction Range</p>
       <p class="affiliate-links__description">Key Features:</p>

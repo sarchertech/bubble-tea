@@ -1,0 +1,9 @@
+<a class='af-link' href='<%= link %>' target='_blank'>
+  <%= image_tag image, class: 'af-link__img', width: "64", height: "64" if image %>
+  <div class='af-link__description'>
+    <h3 class='af-link__title'><%= title %></h3>
+    <div class='af-link__text'>
+      <%= yield %>
+    </div>
+  </div>
+</a>

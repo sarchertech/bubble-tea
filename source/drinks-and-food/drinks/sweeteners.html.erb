@@ -2,78 +2,36 @@
 title: Sweeteners
 ---
 
-<div class="page-intro">
-  <p class="page-intro__description">
-    <%# TODO MAKE SWEETENER INTRO DESCRIPTION %>
+<div class="page-intro section">
+  <p>
+    You have many options for sweeteners, be careful when using dry sugar or honey in cold drinks. They won't dissolve well
+    unless shaken thoroughly.
   </p>
 </div>
 
 
-<ul class="terminal-list">
-  <li class="terminal-list__item">
-    <h2 class="terminal-list__title">Simple Syrup</h2>
-    <p class="terminal-list__description"> 
-      A liquid sweetener made from granulated sugar and water. 
-    </p>
-    <ul class="affiliate-links">
-      <li class="affiliate-links__li">
-        <p class="affiliate-links__description">
-          Example Description
-        </p>
-        <a class="affiliate-links__link">
-          Example Link
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li class="terminal-list__item">
-    <h2 class="terminal-list__title">Honey</h2>
-    <p class="terminal-list__description"> 
-      Use honey as a sweetener in tea and milk tea drinks for a unique and refreshing flavor. 
-      Honey can also be used to sweeten bobas after cooking. 
-    </p>
-    <ul class="affiliate-links">
-      <li class="affiliate-links__li">
-        <p class="affiliate-links__description">
-          Example Description
-        </p>
-        <a class="affiliate-links__link">
-          Example Link
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li class="terminal-list__item">
-    <h2 class="terminal-list__title">Condensed Milk</h2>
-    <p class="terminal-list__description"> 
-      Condensed Milk is both a milk and a sweetener. Use it in Thai Tea, Vietnamese Coffee, 
-      or milk teas to add a creamy texture and rich flavor
-    </p>
-    <ul class="affiliate-links">
-      <li class="affiliate-links__li">
-        <p class="affiliate-links__description">
-          Example Description
-        </p>
-        <a class="affiliate-links__link">
-          Example Link
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li class="terminal-list__item">
-    <h2 class="terminal-list__title">Brown Sugar</h2>
-    <p class="terminal-list__description"> 
-      Brown sugar is necessary for sweetening bobas after cooking and can be used in other tea or milk tea drinks. 
-    </p>
-    <ul class="affiliate-links">
-      <li class="affiliate-links__li">
-        <p class="affiliate-links__description">
-          Example Description
-        </p>
-        <a class="affiliate-links__link">
-          Example Link
-        </a>
-      </li>
-    </ul>
-  </li>
-</ul>
+<% af_category "Simple Syrup" do %>
+  <p> 
+    A liquid sweetener made from granulated sugar and water. 
+  </p>
+<% end %> 
+
+<% af_category "Honey" do %>
+  <p> 
+    Use honey as a sweetener in tea and milk tea drinks for a unique and refreshing flavor. 
+    Honey can also be used to sweeten boba after cooking. 
+  </p>
+<% end %> 
+
+<% af_category "Condensed Milk" do %>
+  <p> 
+    Condensed Milk is both a milk and a sweetener. Use it in Thai Tea, Vietnamese Coffee, 
+    or milk teas to add a creamy texture and rich flavor.
+  </p>
+<% end %> 
+
+<% af_category "brown Sugar" do %>
+  <p> 
+    Brown sugar is necessary for sweetening bobas after cooking and can be used in other tea or milk tea drinks. 
+  </p>
+<% end %> 
