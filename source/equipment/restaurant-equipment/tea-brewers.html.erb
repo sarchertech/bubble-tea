@@ -1,48 +1,44 @@
 ---
 title: Tea Brewers
 ---
-<div class="page-intro">
-  <p class="page-intro__description">
+
+
+<% af_category "Tea Brewers" do %>
+  <p>
     We always recommend that you make your own tea in-house. 
     Don’t rely on pre made teas or tea powders. Customers can taste the difference so 
     going cheap on tea will cost you money in the long run. There are several methods 
     and machines you can use for brewing tea depending on the size and scale of your store. 
     Use our product guide to help you find the right choice.
   </p>
-</div>
 
-<ul class="affiliate-links">
-  <li class="affiliate-links__li">
-    <p class="affiliate-links__title">Bloomfield Automtic Iced Tea Brewer</p>
-    <p class="affiliate-links__description">Key Features:</p> 
-    <ul class="affiliate-links__bullet-list">
-      <li class="affiliate-links__bullet-item">Provides 3 and 5 gallon capacity</li>
-      <li class="affiliate-links__bullet-item">Ready-to-brew light indicates the proper water temperature for brewing</li>
-    </ul>
-    <a class="affiliate-links__link" href="https://www.amazon.com/Bloomfield-8740-3-5G-Automatic-Stainless/dp/B00BIR8BN2" target="_blank">
-      Buy on Amazon
-    </a>
-  </li>
-  <li class="affiliate-links__li">
-    <p class="affiliate-links__title">Bunn TB3Q Iced Tea Brewer</p>
-    <p class="affiliate-links__description">Key Features:</p>
-    <ul class="affiliate-links__bullet-list">
-      <li class="affiliate-links__bullet-item">Brewing capacity of 26.7 gallons per hour</li>
-      <li class="affiliate-links__bullet-item">Brew directly into any style portable iced tea dispenser</li>
-    </ul>
-    <a class="affiliate-links__link" href="http://www.cw-usa.com/equipment-commercial-icedtea-bunn-brewers-tb3q.html" target="_blank">
-      Buy on Coffee Wholesale USA
-    </a>
-  </li>
-  <li class="affiliate-links__li">
-    <p class="affiliate-links__title">Curtis High Volume Twin Combo Coffee / Tea Brewer</p>
-    <p class="affiliate-links__description">Key Features:</p>
-    <ul class="affiliate-links__bullet-list">
-      <li class="affiliate-links__bullet-item">Side-by-side brewing with options like pulse brewing, pre-infusion, and fast brew</li>
-      <li class="affiliate-links__bullet-item">Full digital display</li>
-    </ul>      
-    <a class="affiliate-links__link" href="https://www.webstaurantstore.com/curtis-cbht-high-volume-twin-combo-coffee-tea-brewer-220v/945CBHT.html" target="_blank">
-      Buy on Webstaurant
-    </a>
-  </li>  
-</ul>
+  <ul class="af-category__list">
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Bloomfield Automtic Iced Tea Brewer", #link text
+        link: "https://www.amazon.com/Bloomfield-8740-3-5G-Automatic-Stainless/dp/B00BIR8BN2", #href
+        image: 'images/af/equipment/bloomfieldBrewer.png'}) do %> <%# image url %>
+        This brewer has a 3 and 5 gallon capacity and has a ready-to-brew light to indicate the proper water temperature for brewing.
+        -- sold at amazon.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Bunn TB3Q Iced Tea Brewer", #link text
+        link: "http://www.cw-usa.com/equipment-commercial-icedtea-bunn-brewers-tb3q.html", #href
+        image: 'images/af/equipment/bunnBrewer.png'}) do %> <%# image url %>
+        This brewer can brew 26.7 gallons per hour and dispense directly into any style portable iced tea dispenser.
+        -- sold at cw-usa.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Curtis High Volume Twin Combo Coffee / Tea Brewer", #link text
+        link: "https://www.webstaurantstore.com/curtis-cbht-high-volume-twin-combo-coffee-tea-brewer-220v/945CBHT.html", #href
+        image: 'images/af/equipment/curtisBrewer.png'}) do %> <%# image url %>
+        This brewer has side-by-side brewing with options like pulse brewing, pre-infusion, and fast brew and has a full digital display.
+        -- sold at webstaurantstore.com
+      <% end %>
+    </li>
+  </ul>
+<% end %>

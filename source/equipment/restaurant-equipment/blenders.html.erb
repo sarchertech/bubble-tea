@@ -2,68 +2,66 @@
 title: Blenders
 ---
 
-<div class="page-intro">
-  <h1 class="page-intro__title">Blenders</h1>
 
-  <p class="page-intro__description">
-    <%# Write blenders description %>
+<% af_category "Blenders" do %>
+  <p>
+    Blenders will be used to make all of your slush drinks and large batches of bubble tea.
   </p>
-</div>
 
-<ul class="affiliate-links">
-  <li class="affiliate-links__li">
-    <p class="affiliate-links__title">Ninja Professional Blender</p>
-    <p class="affiliate-links__description">Key Features:</p>
-     <ul class="affiliate-links__bullet-list">
-       <li class="affiliate-links__bullet-item">3 speed settings</li>
-       <li class="affiliate-links__bullet-item">Safety feature that keeps the blades from spinning unless lid is secured</li>
-     </ul>
-    <a class="affiliate-links__link" href="https://www.amazon.com/SharkNinja-BL610-Ninja-Professional-Blender/dp/B00NGV4506/" target="_blank">
-      Buy on Amazon
-    </a>
-  </li>
-  <li class="affiliate-links__li">
-    <p class="affiliate-links__title">MengK Professional Blender</p>
-    <p class="affiliate-links__description">Key Features:</p>
-      <ul class="affiliate-links__bullet-list">
-        <li class="affiliate-links__bullet-item">Analog timer from 1 to 5 minutes</li>
-        <li class="affiliate-links__bullet-item">Analog speed setting</li>
-      </ul>
-    <a class="affiliate-links__link" href="https://www.amazon.com/Professional-MengK-Processors-Vegetables-Mayonnaise/dp/B01NANV312" target="_blank">
-      Buy on Amazon
-    </a>
-  </li>
-  <li class="affiliate-links__li">
-    <p class="affiliate-links__title">Avamix Commercial Blender</p>
-    <p class="affiliate-links__description">Key Features:</p>
-      <ul class="affiliate-links__bullet-list">
-        <li class="affiliate-links__bullet-item">2 speed toggle control</li>
-        <li class="affiliate-links__bullet-item">64 oz polycarbonate jar</li>
-      </ul>
-    <a class="affiliate-links__link" href="https://www.webstaurantstore.com/avamix-bx2000t-3-1-2-hp-commercial-blender-with-toggle-control-and-64-oz-polycarbonate-container/928BX2000T.html" target="_blank">
-      Buy on Webstaurant
-    </a>
-  </li>
-  <li class="affiliate-links__li">
-    <p class="affiliate-links__title">Waring Torque 2.0 Blender</p>
-    <p class="affiliate-links__description">Key Features:</p>
-    <ul class="affiliate-links__bullet-list">
-      <li class="affiliate-links__bullet-item">2 speed motor</li>
-      <li class="affiliate-links__bullet-item">Easy to use Pulse toggle switch</li>
-    </ul>
-    <a class="affiliate-links__link" href="https://www.webstaurantstore.com/waring-tbb145-48-oz-torque-2-0-blender-with-toggle-controls/929TBB145.html" target="_blank">
-      Buy on Webstaurant
-    </a>
-  </li>
-  <li class="affiliate-links__li">
-    <p class="affiliate-links__title">Vitamix 7500 Blender</p>
-    <p class="affiliate-links__description">Key Features:</p>
-    <ul class="affiliate-links__bullet-list">
-      <li class="affiliate-links__bullet-item">Variable analog speed control</li>
-      <li class="affiliate-links__bullet-item">64 oz container</li>
-    </ul>
-    <a class="affiliate-links__link" href="https://www.amazon.com/Vitamix-001970-7500-Blender-Red/dp/B00LQT4ZZU" target="_blank">
-      Buy on Amazon
-    </a>
-  </li>  
-</ul>
+  <ul class="af-category__list">
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Ninja Professional Blender", #link text
+        link: "https://www.amazon.com/SharkNinja-BL610-Ninja-Professional-Blender/dp/B00NGV4506/", #href
+        image: 'images/af/equipment/ninjaBlender.png'}) do %> <%# image url %>
+        This blender has three speed settings and offers a safety feature that keeps the blades from spinning unless lid is secured.
+        -- sold at amazon.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "MengK Professional Blender", #link text
+        link: "https://www.amazon.com/Professional-MengK-Processors-Vegetables-Mayonnaise/dp/B01NANV312", #href
+        image: 'images/af/equipment/mengKBlender.png'}) do %> <%# image url %>
+        This blender has an analog timer that can be set for 1 to 5 minutes, as well as multiple analog speed settings.
+        -- sold at amazon.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Avamix Commercial Blender", #link text
+        link: "https://www.webstaurantstore.com/avamix-bx2000t-3-1-2-hp-commercial-blender-with-toggle-control-and-64-oz-polycarbonate-container/928BX2000T.html", #href
+        image: 'images/af/equipment/avamixBlender.png'}) do %> <%# image url %>
+        This blender has a two speed toggle control with a 64 oz polycarbonate jar.
+        -- sold at webstaurantstore.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Waring Torque 2.0 Blender", #link text
+        link: "https://www.webstaurantstore.com/waring-tbb145-48-oz-torque-2-0-blender-with-toggle-controls/929TBB145.html", #href
+        image: 'images/af/equipment/waringBlender.png'}) do %> <%# image url %>
+        This blender has a two speed motor with an easy to use pulse toggle switch.
+        -- sold at amazon.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Vitamix 7500 Blender", #link text
+        link: "https://www.amazon.com/Vitamix-001970-7500-Blender-Red/dp/B00LQT4ZZU", #href
+        image: 'images/af/equipment/vitamixBlender.png'}) do %> <%# image url %>
+        This blender has a variable analog speed control with a 64 oz container.
+        -- sold at amazon.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Madin Tea Shop Blender", #link text
+        link: "https://www.bubbleteaology.com/product/bubble-tea-sealer-machine/", #href
+        image: 'images/af/equipment/madinBlender.png'}) do %> <%# image url %>
+        This tea blender and milk frother offers an enclosed blade design for safe blender usage.
+        -- sold at bubbleteaology.com
+      <% end %>
+    </li>
+  </ul>
+<% end %>

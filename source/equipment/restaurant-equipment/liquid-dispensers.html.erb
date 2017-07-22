@@ -2,45 +2,40 @@
 title: Liquid Dispensers
 ---
 
-<div class="page-intro">
-  <p class="page-intro__description">
-    Good dispensers contain large quantities of tea and keep them piping hot or freezing cold. 
-    We recommend having large dedicated dispensers for each kind of tea to save time on brewing and pouring. 
-  </p>
-</div>
 
-<ul class="affiliate-links">
-  <li class="affiliate-links__li">
-    <p class="affiliate-links__title">Bunn 3 / 3.5 Gallon Iced Tea Dispensers</p>
-    <p class="affiliate-links__description">Key Features:</p>
-    <ul class="affiliate-links__bullet-list">
-      <li class="affiliate-links__bullet-item">Modern stainless steel design</li>
-      <li class="affiliate-links__bullet-item">Offset handles for closer positioning</li>
-    </ul>
-    <a class="affiliate-links__link" href="http://www.cw-usa.com/equipment-commercial-icedtea-bunn-dispensers-tds3.html" target="_blank">
-      Buy on Coffee Wholesale USA
-    </a>
-  </li>
-  <li class="affiliate-links__li">
-    <p class="affiliate-links__title">Curtis 1.5 Gallon Stackable Stainless Steel Iced Tea Dispenser with Plastic Lid</p>
-    <p class="affiliate-links__description">Key Features:</p> 
-    <ul class="affiliate-links__bullet-list">
-      <li class="affiliate-links__bullet-item">Compact size</li>
-      <li class="affiliate-links__bullet-item">Stainless steel design</li>
-    </ul>
-    <a class="affiliate-links__link" href="https://www.webstaurantstore.com/curtis-tc15s-1-5-gallon-stackable-stainless-steel-iced-tea-dispenser-with-plastic-lid/945TC15S.html" target="_blank">
-      Buy on Webstaurant
-    </a>
-  </li>
-  <li class="affiliate-links__li">
-    <p class="affiliate-links__title">TableCraft 2.5 Gallon Single Beverage Dispenser with Infuser</p>
-    <p class="affiliate-links__description">Key Features:</p> 
-    <ul class="affiliate-links__bullet-list">
-      <li class="affiliate-links__bullet-item">Removable ice core and infuser</li>
-      <li class="affiliate-links__bullet-item">Stainless steel design</li>
-    </ul>
-    <a class="affiliate-links__link" href="https://www.amazon.com/dp/B007C07U4A/ref=psdc_3242818011_t1_B005VFFNIS" target="_blank">
-      Buy on Amazon
-    </a>
-  </li>
-</ul>
+<% af_category "Liquid Dispensers" do %>
+  <p>
+    Good dispensers can hold large quantities of tea and keep them piping hot or freezing cold. We recommend having large dedicated dispensers 
+    for each kind of tea to save time on brewing and pouring.
+  </p>
+
+  <ul class="af-category__list">
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Bunn 3 / 3.5 Gallon Iced Tea Dispensers", #link text
+        link: "http://www.cw-usa.com/equipment-commercial-icedtea-bunn-dispensers-tds3.html", #href
+        image: 'images/af/equipment/bunnDispenser.png'}) do %> <%# image url %>
+        This tea dispenser comes in a modern stainless steel design with offset handles for closer positioning of multiple dispensers.
+        -- sold at cw-usa.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Curtis 1.5 Gallon Stackable Stainless Steel Iced Tea Dispenser with Plastic Lid", #link text
+        link: "https://www.webstaurantstore.com/curtis-tc15s-1-5-gallon-stackable-stainless-steel-iced-tea-dispenser-with-plastic-lid/945TC15S.html", #href
+        image: 'images/af/equipment/curtisDispenser.png'}) do %> <%# image url %>
+        This tea dispenser is compact to save space and comes in a simple stainless steel design.
+        -- sold at webstaurant.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "TableCraft 2.5 Gallon Single Beverage Dispenser with Infuser", #link text
+        link: "https://www.amazon.com/dp/B007C07U4A/ref=psdc_3242818011_t1_B005VFFNIS", #href
+        image: 'images/af/equipment/tablecraftDispenser.png'}) do %> <%# image url %>
+        This tea dispenser comes in an elegant stainless steel design and includes a removable ice core/infuser insert.
+        -- sold at amazon.com
+      <% end %>
+    </li>
+  </ul>
+<% end %>
