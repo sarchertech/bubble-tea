@@ -8,6 +8,7 @@ end
 activate :directory_indexes
 set :relative_links, true
 activate :livereload
+activate :gzip
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
