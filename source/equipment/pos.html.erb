@@ -2,19 +2,21 @@
 title: Point of Sale Systems
 ---
 
-<div class="page-intro">
-  <h1 class="page-intro__title">Point of Sale</h1>
-
-  <p class="page-intro__description">
+<% af_category "Square" do %>
+  <p>
     We recommend using Square as your point of sale system. 
     Square is an easy to setup and inexpensive point of sale system that accepts nearly every form of 
     payment. Their products range from tiny card readers that connect to your existing tablet, to an 
     entire point of sale kit with a built in register and money drawer.
   </p>
 
-  <a href="">Find square equipment and software here</a>
-</div>
-
-
-
-
+  <ul class="af-category__list">
+      <li class="af-category__item">
+        <% af_link({ 
+          title: "Find Square Equipment and Software here", #link text
+          link: "https://squareup.com/pos", #href
+          image: 'images/af/pos/square_logo.png'}) do %> <%# image url %>
+        <% end %>
+      </li>
+  </ul>
+<% end %>

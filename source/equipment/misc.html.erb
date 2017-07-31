@@ -2,67 +2,51 @@
 Title: Misc
 ---
 
-<div class="page-intro">
-  <h1 class="page-intro__title">Other Equipment</h1>
-
-  <p class="page-intro__description">
-    Here are a few oother pieces of equipment that you may consider. The could help to create an all important 
+<% af_category "Other Equipment" do %>
+  <p>
+    Here are a few oother pieces of equipment that you may want to consider. The could help to create an all important 
     consitency with your beverages or provide your patrons with additional product options.
   </p>
-</div>
 
-<div class="other-equipment">
-  <h2>Liquid Sugar Dispenser</h2>
-    <ul class="affiliate-links">
-      <li class="affiliate-links__li">
-        <p class="affiliate-links__title">9EN Bubble Tea Sugar Dispenser</p>
-        <p class="affiliate-links__description">Key Features:</p>
-        <ul class="affiliate-links__bullet-list">
-          <li class="affiliate-links__bullet-item">24 programmable dispensing functions</li>
-          <li class="affiliate-links__bullet-item">Fully dgital</li>
-        </ul>
-        <a class="affiliate-links__link" href="https://www.bubbleteaology.com/product/sugar-liquid-fructose-dispenser-machine/" target="_blank">
-          Buy on Bubble Teaology
-        </a>
-      </li>
-    </ul>
-  
-  <h2>Snow Ice Machines</h2>
-    <ul class="affiliate-links">
-      <li class="affiliate-links__li">
-        <p class="affiliate-links__title">Global Bear PDOJ-M-NSF Single Serve Shaved Ice/Shaved Snow Machine</p>
-        <p class="affiliate-links__description">Key Features:</p>
-        <ul class="affiliate-links__bullet-list">
-          <li class="affiliate-links__bullet-item">Compact size</li>
-          <li class="affiliate-links__bullet-item">Single serving</li>
-          <li class="affiliate-links__bullet-item">Single serve ice chamber makes for easy cleaning</li>
-        </ul>
-        <a class="affiliate-links__link" href="https://www.bubbleteaology.com/product/global-bear-single-serve-pdoj-m-nsf/" target="_blank">
-          Buy on Bubble Teaology
-        </a>
-      </li>
-      <li class="affiliate-links__li">
-        <p class="affiliate-links__title">Global Bear PDOM-M-GRM-NSF Shaved Ice/Shaved Snow Machine</p>
-        <p class="affiliate-links__description">Key Features:</p>
-        <ul class="affiliate-links__bullet-list">
-          <li class="affiliate-links__bullet-item">Compact size</li>
-          <li class="affiliate-links__bullet-item">Adjustable shaving fineness knob</li>
-          <li class="affiliate-links__bullet-item">Wobble free safety clamp keeps ice block centered </li>
-        </ul>
-        <a class="affiliate-links__link" href="https://www.bubbleteaology.com/product/nsf-snow-ice-shaver-pdom-m/" target="_blank">
-          Buy on Bubble Teaology
-        </a>
-      </li>
-      <li class="affiliate-links__li">
-        <p class="affiliate-links__title">Global Bear PDOM Snow Ice Shaver</p>
-        <p class="affiliate-links__description">Key Features:</p>
-        <ul class="affiliate-links__bullet-list">
-          <li class="affiliate-links__bullet-item">Foot pedal</li>
-          <li class="affiliate-links__bullet-item">Adjustable shaving fineness knob</li>
-          <li class="affiliate-links__bullet-item">Large snow ice block capacity for high volume shaving</li>
-        </ul>
-        <a class="affiliate-links__link" href="https://www.bubbleteaology.com/product/nsf-snow-ice-shaver" target="_blank">
-          Buy on Bubble Teaology
-        </a>
-      </li>
-    </ul>  
+  <ul class="af-category__list">
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "9EN Bubble Tea Sugar Dispenser", #link text
+        link: "https://www.bubbleteaology.com/product/sugar-liquid-fructose-dispenser-machine/", #href
+        image: 'images/af/equipment/sugarDispenser.png'}) do %> <%# image url %>
+        This fully digital liquid sugar dispenser has 24 programmable dispensing functions for adding the precise amount 
+        of sugar to your drinks. 
+        -- sold at bubbleteaology.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Global Bear PDOJ-M-NSF Single Serve Shaved Ice/Shaved Snow Machine", #link text
+        link: "https://www.bubbleteaology.com/product/global-bear-single-serve-pdoj-m-nsf/", #href
+        image: 'images/af/equipment/globalBearPDOJ.png'}) do %> <%# image url %>
+        This compact shaved snow machine is perfect for making single servings of shaved snow.
+        -- sold at bubbleteaology.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Global Bear PDOM-M-GRM-NSF Shaved Ice/Shaved Snow Machine", #link text
+        link: "https://www.bubbleteaology.com/product/nsf-snow-ice-shaver-pdom-m/", #href
+        image: 'images/af/equipment/globalBearPDOM-M.png'}) do %> <%# image url %>
+        This compact shaved snow machine has an adjustable knob for chaning the fineness of the snow and features a 
+        wobble-free safety clam which keeps the ice block centered.
+        -- sold at bubbleteaology.com
+      <% end %>
+    </li>
+    <li class="af-category__item">
+      <% af_link({ 
+        title: "Global Bear PDOM Snow Ice Shaver", #link text
+        link: "https://www.bubbleteaology.com/product/nsf-snow-ice-shaver", #href
+        image: 'images/af/equipment/globalBearPDOM.png'}) do %> <%# image url %>
+        This shaved snow machine features a foot pedal, knob for fine tuning snow fineness, and is perfect for shaving large volumes
+        of snow.
+        -- sold at bubbleteaology.com
+      <% end %>
+    </li>
+  </ul>
+<% end %>

@@ -133,20 +133,24 @@ body {
   }
 
   &__item {
-    margin-bottom: 8px;
+    margin-bottom: 24px;
   }
 }
 
 .af-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
 
   &__img {
     // border-radius: 50%;
     // border: 3px solid $colorH;
     margin-right: 8px;
-    align-self: center;
+    position: relative;
+    top: 4px;
+    float: left;
+    margin-bottom: -4px;
+    // align-self: center;
   }
 
   &__title {
@@ -350,6 +354,7 @@ body {
   // background: linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%);
   background-color: $light-gray;
   padding: 0 8px;
+  line-height: 1.5;
 
   &__item {
     font-size: 130%;
