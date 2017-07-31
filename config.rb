@@ -17,6 +17,11 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+end
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
