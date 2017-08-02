@@ -4,7 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= "Bubble Tea Today" + (current_page.data.title ? " - #{current_page.data.title}" : "") %></title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+    <meta name="description" 
+      content="Want to start a bubble tea store, or looking to improve an existing one? We can help!">
     <%#= stylesheet_link_tag "reset" %>
     <%= stylesheet_link_tag "site" %>
     <script>
@@ -16,6 +18,23 @@
       ga('create', 'UA-103791093-1', 'auto');
       ga('send', 'pageview');
 
+    </script>
+
+    <script>
+      var WebFontConfig = {
+          google: {
+              families: ['Roboto']
+          },
+          timeout: 1500
+      };
+
+      (function(){
+          var wf = document.createElement('script');
+          wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+          wf.async = 'true';
+          document.head.appendChild(wf);
+      })();    
     </script>
     <%#= javascript_include_tag "site" %>
   </head>

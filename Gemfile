@@ -10,3 +10,4 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem 'middleman-s3_sync'
 gem 'mime-types'
 gem 'middleman-dotenv', '~> 2.0'
+gem 'middleman-inline'
